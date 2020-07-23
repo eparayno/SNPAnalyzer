@@ -1,4 +1,4 @@
-# ANALYZESNPS.PY
+# SNPANALYZER.PY
 # AUTHOR: ERIKA PARAYNO
 # DATE: 07/22/2020
 # DESCRIPTION:  Takes a fasta file with corresponding csv file of genome to identify and analyze SNPs.
@@ -7,7 +7,7 @@
 # ASSUMPTIONS:  - fasta file located in subdirectory source: containing at least accession name & ending in >END
 #               - csv file with the following attributes: acccession, species, length, completeness,
 #                 geo location, US state, isolation source and collection date
-#               - paths edited appropriately in the code (see line 30)
+#               - paths edited appropriately in the code (see line 35-36)
 
 # class storing DNA attributes
 class Sequence:
@@ -100,11 +100,9 @@ class analyzeSNPs:
     mutationIndexes = []
     counter = 0
 
-    while counter < len(trimmedSeqStorage) - 2:
+    while counter < len(trimmedSeqStorage) - 1:
         a = trimmedSeqStorage[counter].DNAseq
         b = trimmedSeqStorage[counter+1].DNAseq
-        #print(a)
-        #print(b)
 
         strIndex = 0
         for aNuc, bNuc in zip(a, b):
@@ -127,8 +125,8 @@ class analyzeSNPs:
     print("Area of interest: ", mutationLocMode-bufferSize, areaOfInterest, mutationLocMode+bufferSize)
 
     # request blast results which returns xml
-    # ***IN PROGRESS: find a way to exclude certain taxid (SARS-CoV-2 taxid:2697049)
-    # excludeTaxID = '2697049'
+    # ***IN PROGRESS: find a way to exclude certain taxid in result_handle
+    # excludeTaxID = '2697049'  (SARS-CoV-2 taxid:2697049)
     result_handle = NCBIWWW.qblast("blastn", "nt", areaOfInterest)
     print("XML retrieved")
 
