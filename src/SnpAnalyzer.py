@@ -18,8 +18,8 @@ from SnpFinder import snp_finder
 
 class SnpAnalyzer:
     # file paths, EDIT THIS AS NEEDED FOR YOUR RESPECTIVE GENES / FILES
-    sequences_path = "sources/SeqDNA.fasta"
-    attributes_path = "sources/SeqAttributes.csv"
+    sequences_path = "data/SeqDNA.fasta"
+    attributes_path = "data/SeqAttributes.csv"
 
     # handle fasta and csv files and store each item into Sequence object list
     origSeqStorage = GenbankDataHandler.read_files(sequences_path, attributes_path)
