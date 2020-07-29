@@ -1,11 +1,11 @@
 # SNP Analyzer
-Takes GenBank data (csv and fasta), aggregates set using common lengt, and identifies SNPs. Buffered nucleotide location with most frequent mutations will be BLASTed (Basic Local Alignment Search Tool) to return top organism match.
+Takes GenBank data (csv and fasta), aggregates set using common length, and identifies SNPs. Buffered nucleotide location with most frequent mutations will be BLASTed (Basic Local Alignment Search Tool) to return top organism match.
 
 ## Getting Started
 These instructions will get you a copy of the calculator onto your local machine. 
 
 ### Prerequisites
-- Make sure [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git), [Python](https://www.python.org/downloads/), and [BioPython](https://biopython.org/wiki/Download are installed in your environment
+- Make sure [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git), [Python](https://www.python.org/downloads/), and [BioPython](https://biopython.org/wiki/Download] are installed in your environment
 
 ### Installing 
 Run the following command in working directory: 
