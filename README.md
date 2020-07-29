@@ -5,7 +5,7 @@ Takes GenBank data (csv and fasta), aggregates set using common length, and iden
 These instructions will get you a copy of the calculator onto your local machine. 
 
 ### Prerequisites
-- Make sure [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git), [Python](https://www.python.org/downloads/), and [BioPython](https://biopython.org/wiki/Download] are installed in your environment
+- Make sure [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git), [Python](https://www.python.org/downloads/), and [BioPython](https://biopython.org/wiki/Download) are installed in your environment
 
 ### Installing 
 Run the following command in working directory: 
